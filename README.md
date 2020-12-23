@@ -1,1 +1,1 @@
-"# AgriWeb - Farming web platform" 
+# AgriWeb - Farming web platform
