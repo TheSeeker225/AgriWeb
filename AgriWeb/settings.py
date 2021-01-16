@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'aLearning.apps.AlearningConfig',
     'aCommerce.apps.AcommerceConfig',
     'storager.apps.StoragerConfig',
+    'EburnieTours.apps.EburnietoursConfig',
 ]
 
 MIDDLEWARE = [

@@ -21,5 +21,6 @@ urlpatterns = [
     path('sondage/', include('aPolls.urls')),
     path('learning/', include('aLearning.urls')),
     path('storager-suite/', include('storager.urls')),
+    path('eburnie-tours/', include('EburnieTours.urls')),
     path('seek-back-door/', admin.site.urls),
 ]

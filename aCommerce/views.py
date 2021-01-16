@@ -1,11 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Categorie, Produit, Figurer, Commande
+
+
 
 # Create your views here.
 def homepage(request):
     return render(request, 'aCommerce/index.html')
 def produits(request):
-    return render(request, 'aCommerce/catalogue.html')
+    context = {
+        'categories': Categorie.objects.all(),
+        'produits': Produit.objects.all(),
+    }
+    return render(request, 'aCommerce/catalogue.html', context)
+
 def categorie(request, categorie_nom):
     return HttpResponse("Hello, world ! It is there I show the description of a product")
 def produit(request, categorie_nom = "Legumes", produit_nom = "Aubergine"):
