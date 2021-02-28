@@ -79,28 +79,6 @@
         sub_menu_is_showed = -1;
     });
 
-    /*[ Show megamenu dropdown ]
-    ===========================================================*/
-    // breakpoint and up
-    $(window).resize(function(){
-        if ($(window).width() >= 980){
-
-          // when you hover a toggle show its dropdown menu
-          $(".menu .js-show-megamenu-dropdown").hover(function () {
-             $(this).parent().toggleClass("show");
-             $(this).parent().find(".megamenu-dropdown").toggleClass("show");
-           });
-
-            // hide the menu when the mouse leaves the dropdown
-          $( ".menu .megamenu-dropdown" ).mouseleave(function() {
-            $(this).removeClass("show");
-          });
-
-            // do something here
-        }
-    });
-
-
      /*[ Fixed Header ]
     ===========================================================*/
     var posWrapHeader = $('.topbar').height();
