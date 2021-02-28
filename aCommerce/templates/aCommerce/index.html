@@ -1414,6 +1414,12 @@
 {% endblock %}
 
 {% block javascripts %}
+$(document).ready(function() {
+		$(".megamenu").on("click", function(e) {
+			e.stopPropagation();
+		});
+	});
+
 <!--===============================================================================================-->
 	<script type="text/javascript" src="{% static 'aCommerce/vendor/select2/select2.min.js' %}"></script>
 	<script type="text/javascript">

@@ -9,8 +9,8 @@ def homepage(request):
     return render(request, 'aCommerce/index.html')
 def produits(request):
     context = {
-        'categories': Categorie.objects.all(),
-        'produits': Produit.objects.all(),
+        'categorie_list': Categorie.objects.all(),
+        'produit_list': Produit.objects.all(),
     }
     return render(request, 'aCommerce/catalogue.html', context)
 

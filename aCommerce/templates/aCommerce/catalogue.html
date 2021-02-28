@@ -30,77 +30,26 @@
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<!--  -->
+
 						<h4 class="m-text14 p-b-7">
 							Cat&eacute;gories
 						</h4>
 
-						<ul class="p-b-54">
-							<li class="p-t-4">
-								<a href="#" class="s-text13 active1">
-									Tout
-								</a>
-							</li>
+						<div class="filter-color p-t-22 p-b-5 bo3">
+							<div class="m-text10 p-l-15 p-b-10">
+								Tout
+								<span class="badge badge-success badge-pill">30</span>
+							</div>
+						</div>
 
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									C&eacute;r&eacute;ales
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Champignons
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Crustac&eacute;s
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Escargots
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Fruits
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									L&eacute;gumes
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Poissons
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Tubercules
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Volaille
-								</a>
-							</li>
-
-							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Viandes
-								</a>
-							</li>
-						</ul>
+						{% for categorie in categorie_list %}
+						<div class="filter-color p-t-22 p-b-5 bo3">
+							<div class="m-text10 p-l-15 p-b-10">
+								{{ categorie.nom }}
+								<span class="badge badge-success badge-pill">3</span>
+							</div>
+						</div>
+						{% endfor %}
 
 						<!--  -->
 						<h4 class="m-text14 p-b-32">
@@ -216,46 +165,14 @@
 
 					<!-- Product -->
 					<div class="row">
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
-							<!-- Block2 -->
-							<div class="block2">
-								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-									<img src="{% static 'aCommerce/images/item-03.jpg+6' %}" alt="Saut&eacute; de crevettes">
 
-									<div class="block2-overlay trans-0-4">
-										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-										</a>
-
-										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Choisir
-											</button>
-										</div>
-									</div>
-								</div>
-
-								<div class="block2-txt p-t-20">
-									<a href="" class="block2-name dis-block s-text3 p-b-5">
-										Saut&eacute; de crevettes
-									</a>
-
-									<span class="block2-price m-text6 p-r-5">
-										10.000 F. CFA
-									</span>
-								</div>
-							</div>
-						</div>
-
-						{% for produit in produits %}
+						{% for produit in produit_list %}
 
 							<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
-								<div class="block2-img wrap-pic-w of-hidden pos-relative">
-									<img src="{% static 'aCommerce/images/item-03.jpg' %}" alt="Marmite de fermier au semoule de manioc m&eacute;tisse">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+									<img src="{% static 'aCommerce/images/item-03.jpg' %}" alt="{{ produit.nom }}">
 
 									<div class="block2-overlay trans-0-4">
 										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -274,11 +191,11 @@
 
 								<div class="block2-txt p-t-20">
 									<a href="" class="block2-name dis-block s-text3 p-b-5">
-										Marmite de fermier au semoule de manioc m&eacute;tisse
+										{{ produit.nom }}
 									</a>
 
 									<span class="block2-price m-text6 p-r-5">
-										12.500 F. CFA
+										{{ produit.prix }} F. CFA
 									</span>
 								</div>
 							</div>

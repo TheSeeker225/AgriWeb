@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def connexion(request):
-    return render(request, 'storager/index.html')
+    return render(request, 'storager/course-single.html')
 def index(request):
     return render(request, 'storager/dashboard.html')
 def catalogue(request):

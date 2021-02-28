@@ -9,9 +9,9 @@
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="{% static 'aCommerce/images/icons/favicon.ico' %}"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'aCommerce/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'aCommerce/node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'aCommerce/fonts/fontawesome-free-5.15.1-web/css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'aCommerce/node_modules/@fortawesome/fontawesome-free/css/all.min.css' %}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{% static 'aCommerce/vendor/animate/animate.css' %}">
 <!--===============================================================================================-->
@@ -53,109 +53,73 @@
 		<div class="wrap_menu">
 			<nav class="menu">
 				<ul class="main_menu">
-					<li class="sale-noti">
+					<li class="nav-item">
 						<a href="/">Accueil</a>
 					</li>
 
-					<li>
+					<li class="nav-item">
 						<a href="/learning/" target="_blank">Apprendre</a>
 					</li>
 
-					<li>
+					<li class="nav-item">
 						<a href="/articles">Astuces</a>
 					</li>
 
-					<li class="dropdown mega-dropdown full-width">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            Boutique <i class="fa fa-caret-down"></i>
-                        </a>
-                        <div class="custom-menu">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="#">
-                                            <img src="./img/banner06.jpg" alt="">
-                                            <div class="banner-caption text-center">
-                                                <h3 class="white-color text-uppercase">Women’s</h3>
-                                            </div>
-                                        </a>
-                                        <hr>
-                                    </div>
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="#">
-                                            <img src="./img/banner07.jpg" alt="">
-                                            <div class="banner-caption text-center">
-                                                <h3 class="white-color text-uppercase">Men’s</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <hr>
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="#">
-                                            <img src="./img/banner08.jpg" alt="">
-                                            <div class="banner-caption text-center">
-                                                <h3 class="white-color text-uppercase">Accessories</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <hr>
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="hidden-sm hidden-xs">
-                                        <a class="banner banner-1" href="#">
-                                            <img src="./img/banner09.jpg" alt="">
-                                            <div class="banner-caption text-center">
-                                                <h3 class="white-color text-uppercase">Bags</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <hr>
-                                    <ul class="list-links">
-                                        <li>
-                                            <h3 class="list-links-title">Categories</h3></li>
-                                        <li><a href="#">Women’s Clothing</a></li>
-                                        <li><a href="#">Men’s Clothing</a></li>
-                                        <li><a href="#">Phones & Accessories</a></li>
-                                        <li><a href="#">Jewelry & Watches</a></li>
-                                        <li><a href="#">Bags & Shoes</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+					<li class="nav-item js-show-megamenu-dropdown">
+						<a class="">Boutique</a>
 
-					<li>
+						<div class="megamenu-dropdown" border-0 p-0 m-0>
+          					<div class="container">
+            					<div class="row bg-white rounded-0 m-0 shadow-sm">
+              						<div class="col-lg-7 col-xl-8">
+                						<div class="p-4">
+											<div class="row">
+												<div class="col-lg-6 mb-4">
+											  		<h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+													<ul class="list-unstyled">
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0">Unique Features</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Image Responsive</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-6 mb-4">
+													<h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+													<ul class="list-unstyled">
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Unique Features</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Image Responsive</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-6 mb-4">
+													<h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+													<ul class="list-unstyled">
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Unique Features</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Image Responsive</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-6 mb-4">
+													<h6 class="font-weight-bold text-uppercase">MegaMenu heading</h6>
+													<ul class="list-unstyled">
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Unique Features</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Image Responsive</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Auto Carousel</a></li>
+														<li class="nav-item"><a href="" class="nav-link text-small pb-0 ">Newsletter Form</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5 col-xl-4 px-0 d-none d-lg-block" style="background: center center url(https://res.cloudinary.com/mhmd/image/upload/v1556990826/mega_bmtcdb.png)no-repeat; background-size: cover;"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item">
 						<a href="/contact">Contact</a>
 					</li>
 				</ul>
@@ -562,9 +526,9 @@
 
 					<!--
 						<li class="item-menu-mobile">
-							<a href="index.html">Home</a>
+							<a href="course-single.html">Home</a>
 							<ul class="sub-menu">
-								<li><a href="index.html">Homepage V1</a></li>
+								<li><a href="course-single.html">Homepage V1</a></li>
 								<li><a href="home-02.html">Homepage V2</a></li>
 								<li><a href="home-03.html">Homepage V3</a></li>
 							</ul>
@@ -642,8 +606,8 @@
 					<p class="s-text7 w-size27">
 						Do you have some questions? Let us meet our <a href="" class="color1">team</a>
 						<br>in store at 8th floor, 379 Hudson St, New York, NY 10018
-						<br>or call us on <a href="tel://0022540312947" class="color1">(+225) 40 31 29 47</a> et
-						<a href="tel://0022544725894" class="color1">(+225) 44 72 58 94</a>
+						<br>or call us on <a href="tel://0022540312947" class="color1">(+225) 01 40 31 29 47</a> et
+						<a href="tel://0022544725894" class="color1">(+225) 05 44 72 58 94</a>
 
 					</p>
 
@@ -837,12 +801,12 @@
 
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="{% static 'aCommerce/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'aCommerce/node_modules/jquery/dist/jquery.min.js' %}"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="{% static 'aCommerce/vendor/animsition/js/animsition.min.js' %}"></script>
 <!--===============================================================================================-->
-	<script type="text/javascript" src="{% static 'aCommerce/vendor/bootstrap/js/popper.js' %}"></script>
-	<script type="text/javascript" src="{% static 'aCommerce/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'aCommerce/node_modules/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'aCommerce/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 
 	{% block javascripts %}
 	{% endblock %}
